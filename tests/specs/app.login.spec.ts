@@ -4,7 +4,7 @@ import NativeAlert from '../screenobjects/components/NativeAlert';
 import { loginCredentials, signUpCredentials } from '../data/login.data';
 import allureReporter from '@wdio/allure-reporter';
 
-describe('WebdriverIO and Appium, when interacting with a login form,', () => {
+describe('User, when interacting with a login form,', () => {
     beforeEach(() => {
         TabBar.waitForTabBarShown();
         TabBar.openLogin();
