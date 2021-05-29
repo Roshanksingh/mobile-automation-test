@@ -118,7 +118,10 @@ export const config: WebdriverIO.Config = {
             disableWebdriverScreenshotsReporting: false,
         }],
         ['junit', {
-            outputDir: './report/JunitReport'
+            outputDir: './report/JunitReport',
+            outputFileFormat: function(){
+                return `result-${new Date().getTime()}.xml`
+            },
         }]
     ],
     // Options to be passed to Jasmine.
