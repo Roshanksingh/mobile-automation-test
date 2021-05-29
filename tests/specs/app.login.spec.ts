@@ -17,23 +17,23 @@ describe('WebdriverIO and Appium, when interacting with a login form,', () => {
         LoginScreen.submitLoginForm(loginCredentials);
         // Wait for the alert and validate it
         NativeAlert.waitForIsShown();
-        expect(NativeAlert.text()).toEqual('Test: Success\nYou are logged in!');
+        expect(NativeAlert.text()).toEqual('Success\nYou are logged in!');
 
         // Close the alert
         NativeAlert.pressButton('OK');
         NativeAlert.waitForIsShown(false);
-    },2);
+    });
 
     fit('should be able sign up successfully', () => {
         allureReporter.addSeverity("critical");
         LoginScreen.signUpContainerButton.click();
-        // LoginScreen.submitSignUpForm(signUpCredentials);
-        // // Wait for the alert and validate it
-        // NativeAlert.waitForIsShown();
-        // expect(NativeAlert.text()).toEqual('Signed Up!\nYou successfully signed up!');
+        LoginScreen.submitSignUpForm(signUpCredentials);
+        // Wait for the alert and validate it
+        NativeAlert.waitForIsShown();
+        expect(NativeAlert.text()).toEqual('Signed Up!\nYou successfully signed up!');
 
-        // // Close the alert
-        // NativeAlert.pressButton('OK');
-        // NativeAlert.waitForIsShown(false);
+        // Close the alert
+        NativeAlert.pressButton('OK');
+        NativeAlert.waitForIsShown(false);
     });
 });
