@@ -10,9 +10,7 @@
 #
 node_modules/
 npm-debug.log
-# .env
-# .env*
-
+.env
 # custom
 apps/
 report/
