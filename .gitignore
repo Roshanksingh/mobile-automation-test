@@ -10,9 +10,10 @@
 #
 node_modules/
 npm-debug.log
+.env
 
 # custom
-# apps/
+apps/
 report/
 allure-report/
 *.log
